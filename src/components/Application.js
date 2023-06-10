@@ -1,6 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import "components/Application.scss";
 import DayList from "./DayList";
+import InterviewerList from "./InterviewerList";
+import InterviewerListItem from "./InterviewerListItem";
+
 
 const days = [
   {
@@ -20,7 +23,17 @@ const days = [
   },
 ];
 
+const interviewer = {
+  id: 1,
+  name: "Sylvia Palmer",
+  avatar: "https://i.imgur.com/LpaY82x.png"
+};
+
+
 export default function Application(props) {
+  
+  const [day, setDay] = useState("Monday");
+
   return (
     <main className="layout">
       <section className="sidebar">
@@ -33,8 +46,8 @@ export default function Application(props) {
         <nav className="sidebar__menu">
           <DayList
             days={days}
-            day={"Monday"}
-            setDay={day => console.log(day)}
+            day={day}
+            setDay={setDay}
           />
         </nav>
         <img
@@ -43,6 +56,9 @@ export default function Application(props) {
           alt="Lighthouse Labs"
         />      </section>
       <section className="schedule">
+        <InterviewerList
+        interviewer={interviewer}
+        />
         {/* Replace this with the schedule elements durint the "The Scheduler" activity. */}
       </section>
     </main>
