@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 
 import "components/Appointment/styles.scss";
 
@@ -11,7 +11,6 @@ import Error from "./Error";
 import Status from "./Status";
 
 import useVisualMode from "hooks/useVisualMode";
-
 
 export default function Appointment(props) {
 
@@ -28,18 +27,6 @@ export default function Appointment(props) {
   const { mode, transition, back } = useVisualMode(
     props.interview ? SHOW : EMPTY
   );
-
-  useEffect(() => {
-
-    if (props.interview && mode === EMPTY) {
-      transition(SHOW);
-    }
-
-    if (!props.interview && mode === SHOW) {
-      transition(EMPTY);
-    }
-
-  }, [mode, transition, props.interview])
 
   const save = (name, interviewer) => {
 
@@ -85,8 +72,6 @@ export default function Appointment(props) {
       )}
       {mode === CREATE && (
         <Form
-          name={props.name}
-          value={props.value}
           interviewers={props.interviewers}
           onSave={save}
           onCancel={back}
@@ -111,7 +96,7 @@ export default function Appointment(props) {
       )}
       {mode === EDIT && (
         <Form
-          name={props.interview.student}
+          student={props.interview.student}
           interviewer={props.interview.interviewer.id}
           interviewers={props.interviewers}
           onCancel={back}
