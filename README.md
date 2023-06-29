@@ -33,3 +33,23 @@ npm run storybook
 ```
 
 ## Screenshots
+
+Daily View
+!["Daily View"](/docs/daily-view.png) 
+
+Appointement Form
+!["Appointment Form"](/docs/appointement-form.png)
+
+Confirmation when saving an appointment
+!["Saving Confirmation"](docs/saving-confirmation.png)
+
+Deleting an appointment
+!["Deleting Confirmation"](docs/delete-confirmation.png)
+
+Deleting Status
+!["Deleting Status"](docs/deleting-status.png)
+
+Spots Update
+!["Spots Update"](docs/spots-update.png)
+
+## 
