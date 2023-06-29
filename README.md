@@ -52,4 +52,36 @@ Deleting Status
 Spots Update
 !["Spots Update"](docs/spots-update.png)
 
-## 
+## Running the app locally
+1.Fork and clone this repo to your local machine.
+
+2.Go to the scheduler-api repo here: <https://github.com/lighthouse-labs/scheduler-api> fork and clone this repo.
+
+3.Install dependencies in both folders (scheduler & shceduler-api) using the npm install command.
+
+4.Open two terminals, one will be running our application scheduler and the second one will be running the database "scheduler-api".
+
+5.Start both servers using npm start command.
+
+6.Go to http://localhost:8000/ in your browser and enjoy the app.
+ 
+## Dependencies
+    "axios": "^0.20.0",
+    "classnames": "^2.2.6",
+    "normalize.css": "^8.0.1",
+    "react": "^16.9.0",
+    "react-dom": "^16.9.0",
+    "react-scripts": "3.4.4"
+    "@babel/core": "^7.4.3",
+    "@storybook/addon-actions": "^5.0.10",
+    "@storybook/addon-backgrounds": "^5.0.10",
+    "@storybook/addon-links": "^5.0.10",
+    "@storybook/addons": "^5.0.10",
+    "@storybook/react": "^5.0.10",
+    "@testing-library/jest-dom": "^4.0.0",
+    "@testing-library/react": "^8.0.7",
+    "@testing-library/react-hooks": "^8.0.1",
+    "babel-loader": "8.1.0",
+    "prop-types": "^15.8.1",
+    "react-test-renderer": "^16.9.0",
+    "sass": "^1.53.0"
