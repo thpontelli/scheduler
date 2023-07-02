@@ -47,7 +47,7 @@ describe('Application', () => {
 
     fireEvent.click(getByText(appointment, "Save"));
 
-    console.log(prettyDOM(appointment));
+    //console.log(prettyDOM(appointment));
 
 
     expect(getByText(appointment, "Saving")).toBeInTheDocument();

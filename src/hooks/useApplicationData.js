@@ -24,7 +24,7 @@ export default function useApplicationData(initial) {
   }
 
   const bookInterview = async (id, interview) => {
-    console.log(id, interview);
+    //console.log(id, interview);
     const appointment = {
       ...state.appointments[id],
       interview: { ...interview }
@@ -103,9 +103,9 @@ export default function useApplicationData(initial) {
         interviewers: all[2].data
       }));
 
-      console.log(all[0]); // first
-      console.log(all[1]); // second
-      console.log(all[2]); // third
+      //console.log(all[0]); // first
+      //console.log(all[1]); // second
+      //console.log(all[2]); // third
     });
   }, [])
 
